@@ -7,8 +7,16 @@ export default function Index() {
     router.navigate("/sign-up");
   }
 
+  function handleSignIn() {
+    router.navigate("/(drawer)/(tabs)");
+  }
+
   return (
     <View style={styles.container}>
+      <TouchableOpacity style={styles.button} onPress={handleSignIn}>
+        <Text style={styles.label}>Entrar</Text>
+      </TouchableOpacity>
+
       <TouchableOpacity style={styles.button} onPress={handleSignUp}>
         <Text style={styles.label}>Criar conta</Text>
       </TouchableOpacity>
